@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://u4h28n7dxqfy"]
+
+[ext_resource type="Texture2D" uid="uid://db7b0rra367pq" path="res://resources/main.png" id="1_3mqji"]
+[ext_resource type="Texture2D" uid="uid://c3jm7m7nqxyl2" path="res://enemy.png" id="2_x4av3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rpqi1"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(573, 311)
+scale = Vector2(1.8203125, 1.6875)
+texture = ExtResource("1_3mqji")
+
+[node name="PlayerPlaceHolder" type="Node2D" parent="."]
+position = Vector2(-3, -2)
+
+[node name="Enemy" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+texture = ExtResource("2_x4av3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("RectangleShape2D_rpqi1")
+
+[node name="EnemySpawner" type="Node" parent="."]
+
+[node name="SpawnTimer" type="Timer" parent="EnemySpawner"]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="HUD"]
+anchors_preset = -1
+anchor_right = 0.045
+anchor_bottom = 0.031000001
+offset_left = 236.0
+offset_top = 92.0
+offset_right = 330.16
+offset_bottom = 99.912
+theme_override_colors/font_color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
+text = "Score 0"
+
+[node name="LivesLabel" type="Label" parent="HUD"]
+anchors_preset = -1
+anchor_right = 0.045
+anchor_bottom = 0.031000001
+offset_left = 236.0
+offset_top = 114.0
+offset_right = 330.16
+offset_bottom = 121.912
+theme_override_colors/font_color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
+text = "Lives 1"
