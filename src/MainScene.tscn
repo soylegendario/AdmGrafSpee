@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://u4h28n7dxqfy"]
 
 [ext_resource type="Texture2D" uid="uid://db7b0rra367pq" path="res://resources/main.png" id="1_3mqji"]
-[ext_resource type="Texture2D" uid="uid://c3jm7m7nqxyl2" path="res://enemy.png" id="2_x4av3"]
+[ext_resource type="Texture2D" uid="uid://bnvhfn1xpxfjj" path="res://resources/enemy.png" id="2_x4av3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpqi1"]
 
